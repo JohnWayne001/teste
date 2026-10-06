@@ -1,8 +1,7 @@
 
-export default function CharacterDetail({
-  params,
-}: {
-  params: { characterId: string };
-}) {
-  return <h1>Detalhes sobre o personagem {params.characterId}</h1>;
+export default async function CharacterDetail({searchParams}) {
+  const {search, ordem} = await searchParams;
+  return(
+    <h1>Aluno {search} {ordem}</h1>
+  )
 }
